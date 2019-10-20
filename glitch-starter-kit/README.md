@@ -63,3 +63,24 @@
         const HelloWorld = require('./components/HelloWorld');
 
         ReactDOM.render(<HelloWorld/>, document.getElementById('main'));
+
+### React Router
+* You've done MVC's before
+
+### React Redux
+* Manages states - active, inactive, mouseover, etc
+* Can apply not only to single components but to the whole site
+* Like a '4th dimensional being' that looks at the whole app and sees everything that's going on
+* Has a **state tree**, **actions**, **dispatchers**, **reducers** -- to make changes and have everything talk to each other and make changes to the tree
+* You can use redux with any framework so you have t include react redux (as a binding btwn reduct & react) & redux as dependencies
+
+**Actions** tell us what to do when certain events occur - objects that describe what should be done to the state
+  * Like little data payloads that get sent to the reducers
+
+**Reducers** have a look at what actually happens in the application
+    * which is described by the actions
+    * and then figures out what the global state needs to be,
+    * so the data can flow down to those components so they can update themselves
+
+
+
