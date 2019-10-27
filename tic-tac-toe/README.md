@@ -1,10 +1,39 @@
 # TTT TIL
 
+**27 October 2019**
+- In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.
+- There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.
+
+*Data Change with Mutation*
+`var player = {score: 1, name: 'Jeff'};`
+`player.score = 2;`
+`// Now player is {score: 2, name: 'Jeff'}`
+
+*Data Change without Mutation*
+`var player = {score: 1, name: 'Jeff'};`
+
+`var newPlayer = Object.assign({}, player, {score: 2});`
+`// Now player is unchanged, but newPlayer is {score: 2, name: 'Jeff'}`
+
+*Mutation = bad, immutability = good*
+- Immutability makes complex features much easier to implement.
+- Detecting changes in immutable objects is considerably easier. If the immutable object that is being referenced is different than the previous one, then the object has changed.
+- The main benefit of immutability is that it helps you build pure components in React. 
+- Immutable data can easily determine if changes have been made which helps to determine when a component requires re-rendering.
+    - Future learnings [learn more about shouldComponentUpdate()](https://reactjs.org/docs/optimizing-performance.html#examples)
+
+**Function Components**
+- They are a simpler way to write components that only contain a render method and don’t have their own state
+- Instead of defining a class which extends React.Component, we can write a function that takes props as input and returns what should be rendered
+- Function components are less tedious to write than classes, and many components can be expressed this way
+
+- [Where you left it - taking turns](https://reactjs.org/tutorial/tutorial.html#taking-turns)
+
 **21 October 2019**
-* In JavaScript classes, you need to always call *super* when defining the constructor of a subclass
-* Subclass: when you create a class based off another class
-* All React component classes that have a constructor should start it with a super(props) call.
-* [Where you left it](https://reactjs.org/tutorial/tutorial.html#making-an-interactive-component)
+- In JavaScript classes, you need to always call *super* when defining the constructor of a subclass
+- Subclass: when you create a class based off another class
+- All React component classes that have a constructor should start it with a super(props) call.
+- [Where you left it](https://reactjs.org/tutorial/tutorial.html#making-an-interactive-component)
 
 ---
 
