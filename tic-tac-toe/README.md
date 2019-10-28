@@ -5,9 +5,9 @@
 - There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.
 
 *Data Change with Mutation*
-                var player = {score: 1, name: 'Jeff'};
-                player.score = 2;
-                // Now player is {score: 2, name: 'Jeff'}
+    var player = {score: 1, name: 'Jeff'};
+    player.score = 2;
+    // Now player is {score: 2, name: 'Jeff'}
 
 *Data Change without Mutation*
     var player = {score: 1, name: 'Jeff'};
