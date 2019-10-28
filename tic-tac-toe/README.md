@@ -1,15 +1,39 @@
 # TTT TIL
+## 28 October 2019
+To determine the winner and make the game actually playable, it is pretty much threaded together by this code below: 
 
-**27 October 2019**
+    function calculateWinner(squares) {
+    const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+    for (let i = 0; i < lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+        return squares[a];
+        }
+    }
+    return null;
+    }
+
+## 27 October 2019
 - In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.
 - There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.
 
 *Data Change with Mutation*
+
     var player = {score: 1, name: 'Jeff'};
     player.score = 2;
     // Now player is {score: 2, name: 'Jeff'}
 
 *Data Change without Mutation*
+
     var player = {score: 1, name: 'Jeff'};
 
     var newPlayer = Object.assign({}, player, {score: 2});
@@ -29,7 +53,7 @@
 
 - [Where you left it - taking turns](https://reactjs.org/tutorial/tutorial.html#taking-turns)
 
-**21 October 2019**
+## 21 October 2019
 - In JavaScript classes, you need to always call *super* when defining the constructor of a subclass
 - Subclass: when you create a class based off another class
 - All React component classes that have a constructor should start it with a super(props) call.
