@@ -1,4 +1,20 @@
 # TTT TIL
+
+## 29 October 2019
+**Storing info & ~time travelling~**
+- Slice()ing the data every time new input was added created a history of every move that we can then reference
+- When we render a list, React stores some information about each rendered list item. 
+- When we update a list, React needs to determine what has changed. 
+- We could have added, removed, re-arranged, or updated the list’s items.
+
+**Keys!**
+- `key` is a special and reserved property in React (along with `ref`, a more advanced feature). 
+- When an element is created, React extracts the key property and stores the key directly on the returned element.
+- React automatically uses key to decide which components to update. A component cannot inquire about its key.
+- *It’s strongly recommended to assign proper keys whenever a dynamic list is built. If no key is specified, React will present a warning and use the array index as a key by default.*
+    - Using an index as a key is a big nono for obvi reasons
+- Keys do not need to be globally unique; they only need to be unique between components and their siblings.
+
 ## 28 October 2019
 To determine the winner and make the game actually playable, it is pretty much threaded together by this code below: 
 
